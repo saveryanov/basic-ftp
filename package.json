@@ -2,10 +2,11 @@
   "name": "basic-ftp",
   "version": "2.14.3",
   "description": "FTP client for Node.js with support for explicit FTPS over TLS.",
-  "main": "./lib/ftp",
+  "main": "./dist/ftp",
   "scripts": {
     "test": "mocha",
     "tdd": "mocha --watch",
+    "build": "babel lib --presets babel-preset-env --out-dir dist",
     "lint": "eslint lib/*.js"
   },
   "repository": {
@@ -28,6 +29,24 @@
   },
   "devDependencies": {
     "eslint": "5.6.1",
-    "mocha": "5.2.0"
+    "mocha": "5.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.2",
+    "babel-eslint": "^9.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  },
+  "babel": {
+    "plugins": [
+      "transform-runtime"
+    ]
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
   }
 }
