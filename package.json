@@ -47,6 +47,8 @@
     ]
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "util": "^0.11.0",
+    "util.promisify": "^1.0.0"
   }
 }
