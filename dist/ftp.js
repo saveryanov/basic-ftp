@@ -344,7 +344,7 @@ var net = require("net");
 var tls = require("tls");
 var fs = require("fs");
 var path = require("path");
-var promisify = require("util").promisify;
+const promisify = f => (...args) => new Promise((a,b)=>f(...args, (err, res) => err ? b(err) : a(res)));
 var parseListAutoDetect = require("./parseList");
 var nullObject = require("./nullObject");
 var FTPContext = require("./FtpContext");
